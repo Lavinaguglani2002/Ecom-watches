@@ -18,7 +18,7 @@ app.use("/api/v1/category",categoryRoute)
 app.use("/api/v1/product",productRoute)
 app.get('/',(req,res)=>{
     res.send({
-        message:"welcome to ecommerce app"  //morgan api ke url btata hai
+        message:"welcome to ecommerce watches app"  //morgan api ke url btata hai
     })
 
 })
