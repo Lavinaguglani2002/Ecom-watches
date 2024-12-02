@@ -48,7 +48,7 @@ const CreateProduct = () => {
       productData.append("photo", photo);
       productData.append("category", category);
   
-      const { data } = await axios.post("http://localhost:8080/api/v1/product/create-product", productData); // Added await here
+      const { data } = await axios.post("https://ecom-watches-3.onrender.com/api/v1/product/create-product", productData); // Added await here
       if (data.success) {
         toast.success('Product created successfully');
         navigate("/dashboard/admin/products");

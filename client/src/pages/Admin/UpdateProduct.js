@@ -48,7 +48,7 @@ const UpdateProduct = () => {
   useEffect(() => {
     const getAllCategory = async () => {
       try {
-        const { data } = await axios.get("http://localhost:8080/api/v1/category/get-category");
+        const { data } = await axios.get("https://ecom-watches-3.onrender.com/api/v1/category/get-category");
         if (data?.success) {
           setCategories(data?.category);
         }
@@ -75,7 +75,7 @@ const UpdateProduct = () => {
         productData.append("photo", photo);
       }
   
-      const { data } = await axios.put(`http://localhost:8080/api/v1/product/update-product/${id}`, productData, {
+      const { data } = await axios.put(`https://ecom-watches-3.onrender.com/api/v1/product/update-product/${id}`, productData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -98,7 +98,7 @@ const UpdateProduct = () => {
       let answer = window.confirm("Are you sure you want to delete this product?");
       if (!answer) return;
       
-      const { data } = await axios.delete(`http://localhost:8080/api/v1/product/product/${id}`);
+      const { data } = await axios.delete(`https://ecom-watches-3.onrender.com/api/v1/product/product/${id}`);
       if (data.success) {
         toast.success('Product deleted successfully');
         navigate("/dashboard/admin/products");
@@ -160,7 +160,7 @@ const UpdateProduct = () => {
                 ) : (
                   <div className='text-center'>
                     <img
-                      src={`http://localhost:8080/api/v1/product/product-photo/${id}`}
+                      src={`https://ecom-watches-3.onrender.com/api/v1/product/product-photo/${id}`}
                       alt="product_photo"
                       height={'200px'}
                       className='img img-responsive'
