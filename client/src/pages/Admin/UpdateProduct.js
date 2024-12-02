@@ -24,7 +24,7 @@ const UpdateProduct = () => {
   useEffect(() => {
     const getSingleProduct = async () => {
       try {
-        const { data } = await axios.get(`http://localhost:8080/api/v1/product/get-product/${params.slug}`);
+        const { data } = await axios.get(`https://ecom-watches-3.onrender.com/api/v1/product/get-product/${params.slug}`);
         console.log(data); // Log to check data structure
 
         if (data?.product) {

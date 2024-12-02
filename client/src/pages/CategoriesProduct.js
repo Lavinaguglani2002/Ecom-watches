@@ -34,7 +34,7 @@ const CategoriesProduct = () => {
               <div key={product._id} className="col-md-4 mb-3">
                 <div className="card">
                   <img
-                    src={`http://localhost:8080/api/v1/product/product-photo/${product._id}`}
+                    src={`https://ecom-watches-3.onrender.com/api/v1/product/product-photo/${product._id}`}
                     className="card-img-top"
                     alt={product.name}
                     style={{ height: '200px', objectFit: 'cover' }}

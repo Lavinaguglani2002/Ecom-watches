@@ -100,7 +100,7 @@ const HomePage = () => {
   // Get filtered products
   const filterProduct = async () => {
     try {
-      const { data } = await axios.post('http://localhost:8080/api/v1/product/product-filters', {
+      const { data } = await axios.post('https://ecom-watches-3.onrender.com/api/v1/product/product-filters', {
         checked,
         radio,
       });

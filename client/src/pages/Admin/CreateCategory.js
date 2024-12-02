@@ -18,7 +18,7 @@ const CreateCategory = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("http://localhost:8080/api/v1/category/create-category", { name });
+      const { data } = await axios.post("https://ecom-watches-3.onrender.com/api/v1/category/create-category", { name });
       if (data.success) {
         toast.success(`${name} is created`);
         getAllCategory();
