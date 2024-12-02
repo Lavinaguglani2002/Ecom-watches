@@ -5,7 +5,7 @@ export default function useCategory(){
     //get cart
     const getCategories=async()=>{
         try {
-            const {data}=await axios.get('http://localhost:8080/api/v1/category/get-category')
+            const {data}=await axios.get('https://ecom-watches-3.onrender.com/api/v1/category/get-category')
             setCategories(data?.category)
             
 

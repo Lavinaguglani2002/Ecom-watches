@@ -80,14 +80,13 @@ const Register = () => {
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
   const [answer, setAnswer] = useState("");
-  const [role, setRole] = useState("0"); // Default role is User
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const res = await axios.post("https://ecom-watches-3.onrender.com/api/v1/auth/register", {
-        name, email, password, phone, address, answer, role
+        name, email, password, phone, address, answer
       });
       if (res && res.data.success) {
         toast.success(res.data.message);
@@ -165,20 +164,6 @@ const Register = () => {
               className="form-control" 
               placeholder='What is your favorite sport?' 
             />
-          </div>
-          <div className="mb-3">
-            <label htmlFor="role" className="form-label">Select Role</label>
-            <select 
-              id="role" 
-              className="form-select" 
-              value={role} 
-              onChange={(e) => setRole(e.target.value)} 
-              required
-            >
-              <option value="0">User</option>
-              <option value="2">Moderator</option>
-              <option value="1">Admin</option>
-            </select>
           </div>
           <button type="submit" className="btn-primary">REGISTER</button>
           <Link to="/login" className="link-style">Already have an account? Login here</Link>

@@ -14,7 +14,7 @@ const PrivateRoute = () => {
     const authCheck = async () => {
       try {
         console.log("Sending request with token:", auth?.token);
-        const res = await axios.get("http://localhost:8080/api/v1/auth/user-auth", {
+        const res = await axios.get("https://ecom-watches-3.onrender.com/api/v1/auth/user-auth", {
           headers: {
             Authorization: `Bearer ${auth?.token}`,
           },

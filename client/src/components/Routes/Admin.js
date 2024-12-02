@@ -16,7 +16,7 @@ const AdminRoute = () => {
         console.log("Sending request with token:", auth?.token);
 
         // Send request to server to verify admin access
-        const res = await axios.get("http://localhost:8080/api/v1/auth/admin-auth", {
+        const res = await axios.get("https://ecom-watches-3.onrender.com/api/v1/auth/admin-auth", {
           headers: {
             Authorization: `Bearer ${auth?.token}`,
           },
